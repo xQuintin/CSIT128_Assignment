@@ -22,10 +22,10 @@
                 </style>
             </head>
             <body style="background-color: #498ebf">
-                <ul class="navbar">
+                <ul class="navibar">
                     <li><a href="Home.html">Home</a></li>
                     <li><a href="Projects.html">Projects</a></li>
-                    <li><a class="active" href="#contact">Contact</a></li>
+                    <li><a class="active">Contact</a></li>
                     <li><a href="About.html">About</a></li>
                     <li><a href="Comment.html">Comment</a></li>
                 </ul>
