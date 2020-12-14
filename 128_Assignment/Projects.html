@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Qusai Wael</title>
+    <link rel="stylesheet" href="navbar.css">
+    <style>
+        #progress {
+            margin: auto;
+            padding: 100px 0;
+            width: 60%;
+            border: 3px solid black;
+            text-align: center;
+            font-size: large;
+            background-color: #FFF;
+        }
+
+        #progress div {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body onload="loadDoc()" style="background-color: #498ebf">
+<ul class="navbar">
+    <li><a href="Home.html">Home</a></li>
+    <li><a class="active" href="#projects">Projects</a></li>
+    <li><a href="Contact.xml">Contact</a></li>
+    <li><a href="About.html">About</a></li>
+    <li><a href="Comment.html">Comment</a></li>
+</ul>
+<div id="progress">
+
+</div>
+<script>
+    function loadDoc() {
+        var http = new XMLHttpRequest();
+        http.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                myFunction(this);
+            }
+        };
+        http.open("GET", "projects.json", true);
+        http.send();
+    }
+
+    function myFunction(file) {
+        var json = JSON.parse(file.responseText);
+
+        var txt = "";
+        for (i in json.projects) {
+            txt += '<div><label for="' + json.projects[i].name + '">' + json.projects[i].name + ' Progress: </label>'
+                + '<progress id=" '+ json.projects[i].name +'" value="' + json.projects[i].value + '" max="100"></progress></div>';
+        }
+
+        document.getElementById("progress").innerHTML = txt;
+    }
+</script>
+</body>
+</html>

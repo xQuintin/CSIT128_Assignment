@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="Contact.xslt"?>
+<!DOCTYPE contacts [
+        <!ELEMENT contacts (facebook,twitter,phone)>
+        <!ELEMENT facebook (#PCDATA)>
+        <!ELEMENT twitter (#PCDATA)>
+        <!ELEMENT phone (#PCDATA)>
+        ]>
+<contacts>
+    <facebook>https://www.facebook.com</facebook>
+    <twitter>https://www.twitter.com</twitter>
+    <phone>+971563626776</phone>
+</contacts>

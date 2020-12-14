@@ -1,0 +1,7 @@
+{
+  "projects" : [
+    {"name" : "Java Application", "value": 50},
+    {"name" : "Website", "value": 80},
+    {"name" : "Connor's Portrait", "value": 100},
+    {"name" : "C++ Application", "value": 20}
+]}
